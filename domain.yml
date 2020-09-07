@@ -1,0 +1,112 @@
+actions:
+- action_check_location
+- action_search_restaurants
+- action_send_email
+- action_valid_email_id
+- utter_ask_cuisine
+- utter_ask_for_email
+- utter_ask_for_top_10_restaurent
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_price
+- utter_asking_general_questions
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_location_not_found
+entities:
+- cuisine
+- email
+- location
+- price
+intents:
+- greet
+- affirm
+- given_email
+- select_price
+- restaurant_search
+- negative
+- asking_general_questions
+- ask_for_email
+- goodbye
+- default
+- stop
+responses:
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Mexican
+      title: Mexican
+    - payload: Italian
+      title: Italian
+    - payload: American
+      title: American
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: What kind of cuisine are you looking for?
+  utter_ask_for_email:
+  - text: May I know your Email-Id for that?
+  - text: Can you share your email address?
+  - text: Please, Share your email with me.
+  - text: May I know your email ID, So it can be send there.
+  utter_ask_for_top_10_restaurent:
+  - text: Do you want to know top restaurent in your area?
+  - text: Would you like to know top rated restaurent in your area?
+  - text: There are most loved restaurent, Would you like to know more about them?
+  utter_ask_howcanhelp:
+  - text: How can I help you?
+  - text: How may I help you?
+  - text: how may I assist you?
+  - text: Is ther any way I can help you?
+  utter_ask_location:
+  - text: In which location?
+  - text: For which location you are searching for?
+  - text: Where have you located?
+  - text: May I know which location you are searching for?
+  utter_ask_price:
+  - buttons:
+    - payload: Lesser_300
+      title: Lesser than Rs. 300
+    - payload: In_Between_300_To_700
+      title: Rs. 300 to 700
+    - payload: Greater_300
+      title: More than 700
+    text: For which price range you are looking for?
+  utter_asking_general_questions:
+  - text: I am doing good, Thanks for asking. How may I help you?
+  - text: Great! How you doing.
+  - text: Awsome, How can I help you.
+  utter_default:
+  - text: Sorry I did not understand, I am a virtual assistant who can help you with
+      restaurent search only.
+  utter_goodbye:
+  - text: Goodbye :)
+  - text: Bye-bye
+  - text: Have a great day!
+  - text: Hope to see you soon.
+  - text: Thank you for talking. B'Bye.
+  - text: It was nice talking to you.
+  utter_greet:
+  - text: Hey there! My name is Gargi and I'm a chatbot. How may I help you.
+  - text: Hi! My name is Gargi and I'm a chatbot. How can I assist you.
+  - text: Hello! My name is Gargi and I'm a chatbot. How can I help you.
+  - text: Hey there! My name is Gargi and I'm a chatbot. How can I help you today!
+  utter_location_not_found:
+  - text: We do not operate in that area yet.
+  - text: Sorry! We do not operate in that area yet.
+  - text: Currently We do not work in your area, We are working on this.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 10
+slots:
+  cuisine:
+    type: text
+  email:
+    type: text
+  location:
+    type: text
+  price:
+    type: text
